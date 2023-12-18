@@ -1,0 +1,28 @@
+CARDAPIO:
+52 * 20 bytes array de itens
+Total = 1040 bytes
+
+ITEM:
+1 byte para o código (1 - 20) (int)
+47 bytes para descrição (46 caracteres + \0) (string)
+4 bytes (1 word) para o preço (int unsigned)
+Total = 52 bytes
+
+MESAS:
+92 * 15 bytes array de mesas (92 bytes para cada mesa)
+Total = 1380 bytes
+
+MESA:
+1 byte para o código (1 - 15) (int)
+1 byte para ocupada/desocupada (0: desocupada, 1: ocupada) (boolean)
+12 bytes para o telefone do responsável (11 caracteres + \0) (string)
+30 bytes para o nome do responsável (29 caracteres + \0) (string)
+4 bytes (1 word) para o valor total (int unsigned)
+4 bytes (1 word) para o valor pago (int unsigned)
+2 * 20 bytes array de pedidos (array de 2 int's cada)
+Total = 92 bytes
+
+PEDIDO:
+1 byte para o código do item (1-20) (int)
+1 byte para quantidade (int)
+Total = 2 bytes
